@@ -1,0 +1,408 @@
+/* Definições gerais */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Tamanho base de fonte para todo o site */
+}
+
+/* Definição de unidades relativas */
+
+html {
+    font-size: 62.5%; /* Definindo 1rem como equivalente a 10px (62.5% de 16px) */
+}
+
+/* Definições de cores customizadas */
+
+:root {
+    --roxo: #4F2C87; 
+    --roxo-claro: #C4A8F1; 
+    --lilas-bg: #DFD9E9;
+    --lilas-target: #D1C8DF;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.2); /* Sombra utilizando rem para flexibilidade */
+    height: 10vh;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+}
+
+.navbar li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw; /* Largura responsiva */
+}
+
+.navbar a {
+    color: var(--roxo);
+    text-decoration: none;
+    padding: 1rem; /* Preenchimento responsivo */
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4rem; /* Tamanho de fonte responsivo */
+}
+
+/* Topo */
+
+.topo {
+    height: 85vh;
+    background-image: url('/Landpage/components/img/bg.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topo-desc {
+    z-index: 10;
+    text-align: center;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topo-desc span {
+    color: #C4A8F1;
+}
+
+.topo-desc h2 {
+    font-size: 5rem; /* Tamanho de fonte responsivo */
+    padding: 0 2rem; /* Preenchimento responsivo */
+    color: #fff;
+    text-align: center;
+}
+
+.topo-desc p {
+    color: #fff;
+    padding: 0 2rem; /* Preenchimento responsivo */
+    text-align: center;
+}
+
+/* Botões */
+
+.btn, .btn-2 {
+    border-radius: 1.5rem; /* Border-radius responsivo */
+    padding: 1.5rem 3rem; /* Preenchimento responsivo */
+    border-color: transparent;
+    background: linear-gradient(to top, #3D621F, #7CC840);
+    border: transparent;
+    color: #fff;
+    font-size: 1.6rem; /* Tamanho de fonte responsivo */
+    font-weight: 800;
+    transition: all 0.5s;
+}
+
+.btn:hover, .btn-2:hover {
+    border-radius: 1.5rem;
+    padding: 1.6rem 3.5rem; /* Ajuste sutil no hover */
+    border-color: transparent;
+    background: linear-gradient(to top, #3D621F, #7CC840);
+    border: transparent;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* Área Método */
+
+.metod {
+    background-color: var(--lilas-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+}
+
+.metod-title {
+    margin-top: 2%;
+    width: max-content;
+    background-color: var(--lilas-target);
+    border-radius: 0 5rem 5rem 0; /* Border-radius responsivo */
+    padding-left: 1rem; /* Preenchimento responsivo */
+}
+
+.metod h2 {
+    color: var(--roxo);
+    width: 20vw; /* Largura responsiva */
+    font-weight: 300;
+    font-size: 2.5rem; /* Tamanho de fonte responsivo */
+}
+
+.metod-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--roxo);
+}
+
+.metod-desc p {
+    width: 80%;
+    text-align: center;
+    font-size: 2rem; /* Tamanho de fonte responsivo */
+}
+
+/* Pilares */
+
+.pilares {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pilares h2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: var(--roxo);
+    font-weight: 800;
+    font-size: 3rem; /* Tamanho de fonte responsivo */
+}
+
+.pilares-area {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card com fotos */
+
+.pilares-card {
+    border: 0.1rem solid var(--roxo); 
+    margin: 1rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3rem; 
+    padding: 2rem;
+    width: 50%;
+    max-width: 40rem; 
+    height: 80vh;
+}
+
+.pilares-card img {
+    padding: 0.5rem; /* Preenchimento responsivo */
+    width: 90%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 2rem; /* Border-radius responsivo */
+    transition: all 0.5s ease;
+    border: transparent;
+}
+
+.pilares-card img:hover {
+    padding: 0.5rem;
+    width: 90%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.7);
+    border: transparent;
+}
+
+/* Área Texto */
+
+.area-text {
+    background-color: var(--lilas-bg);
+    border-radius: 2rem; /* Border-radius responsivo */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.6rem; /* Tamanho de fonte responsivo */
+    color: var(--roxo);
+    margin-top: 4%;
+    padding: 2rem;
+    font-weight: 200;
+}
+
+.area-text h2 {
+    font-weight: 400;
+    font-size: 2rem; /* Tamanho de fonte responsivo */
+}
+.area-text p{
+    font-size: 1.1rem;
+}
+
+/* Quem Somos */
+
+.quem-somos {
+    background-color: var(--roxo);
+}
+
+.area-quem-somos {
+    width: 50%;
+    padding: 5%;
+}
+
+.area-quem-somos h2 {
+    color: #fff;
+    font-size: 3rem; /* Tamanho de fonte responsivo */
+}
+
+.area-quem-somos p {
+    color: #fff;
+    font-weight: 200;
+    padding-bottom: 2%;
+}
+
+/* O que Fazemos */
+
+.oque-fazemos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.area-oque-fazemos {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 78%;
+    color: var(--roxo);
+}
+
+.area-oque-fazemos h2 {
+    padding-bottom: 1%;
+    font-size: 3rem; /* Tamanho de fonte responsivo */
+}
+
+.area-oque-fazemos p {
+    font-weight: 400;
+}
+
+/* Final */
+
+.final {
+    background-image: url(/Landpage/components/img/bg2.png);
+    width: 100%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.final h2 {
+    color: #fff;
+    width: 80%;
+    font-size: 5rem; /* Tamanho de fonte responsivo */
+    text-align: center;
+}
+
+.final span {
+    color: var(--roxo-claro);
+}
+
+.final p {
+    color: #fff;
+    font-size: 2rem; /* Tamanho de fonte responsivo */
+    border-bottom: 0.1rem solid #fff; /* Bordas responsivas */
+    padding-bottom: 2%;
+}
+
+/* Footer */
+
+footer {
+    background-color: #251937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem; /* Tamanho de fonte responsivo */
+    height: 10vh;
+}
+.desc-mobi{
+    display: none;
+}
+
+
+@media (max-width:850px){
+
+    .topo-desc h2 {
+        font-size: 3rem; 
+       
+    }
+
+    .metod h2 {
+        color: var(--roxo);
+        width: 30vw; /* Largura responsiva */
+        font-weight: 300;
+        font-size: 2rem; /* Tamanho de fonte responsivo */
+    }
+
+    .area-text h2{
+        font-size: 2rem;
+        border-radius: 10px;
+       
+    }
+    .area-text p{
+        display: none;
+    }
+    .area-text{
+        height: 40px;
+        border-radius: 1rem;
+        width: 90%;
+    }
+
+    .pilares-card{
+        height: 36vh;
+    }
+
+    .pilares img{
+        height: 50%;
+        width: 90;
+        object-fit: cover;
+    }
+
+    .desc-mobi{
+        background-color: var(--lilas-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bg-desc-mobi{
+       width: 80%;
+    }
+    .bg-desc-mobi h2{
+        color: var(--roxo);
+        font-size: 1.6rem ;
+    }
+    .bg-desc-mobi p{
+        color: var(--roxo);
+        font-size: 1.2rem;
+        padding-bottom: 6%;
+    }
+}
+
+@media(min-width:1000px){
+    .area-text p{
+        font-size: 1.4rem;
+    }
+    
+}
