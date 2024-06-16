@@ -1,20 +1,24 @@
 /* Definições gerais */
-
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 16px; /* Tamanho base de fonte para todo o site */
 }
+a{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1%;
+}
 
 /* Definição de unidades relativas */
-
 html {
     font-size: 62.5%; /* Definindo 1rem como equivalente a 10px (62.5% de 16px) */
+    scroll-behavior: smooth;
 }
 
 /* Definições de cores customizadas */
-
 :root {
     --roxo: #4F2C87; 
     --roxo-claro: #C4A8F1; 
@@ -22,29 +26,43 @@ html {
     --lilas-target: #D1C8DF;
 }
 
-/* Navbar */
 
+/*link mobi*/
+
+.link-mobi ul{
+
+list-style: none;
+}
+
+.link-mobi  a{
+    display: none;
+}
+
+/** navbar desktop**/
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.2); /* Sombra utilizando rem para flexibilidade */
     height: 10vh;
+    
 }
 
 .navbar ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
-    width: 80%;
+    width: 90%;
+    
 }
 
 .navbar li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw; /* Largura responsiva */
+   
+    
 }
 
 .navbar a {
@@ -54,10 +72,20 @@ html {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.4rem; /* Tamanho de fonte responsivo */
+    transition: .5s all ease;
+}
+
+.navbar a:hover {
+
+    color: var(--roxo-claro);
+}
+
+/* mobile */
+.link-mobi{
+    display: none;
 }
 
 /* Topo */
-
 .topo {
     height: 85vh;
     background-image: url('/Landpage/components/img/bg.png');
@@ -96,7 +124,6 @@ html {
 }
 
 /* Botões */
-
 .btn, .btn-2 {
     border-radius: 1.5rem; /* Border-radius responsivo */
     padding: 1.5rem 3rem; /* Preenchimento responsivo */
@@ -118,11 +145,10 @@ html {
     color: #fff;
     font-size: 1.6rem;
     font-weight: 800;
-    box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.726);
 }
 
 /* Área Método */
-
 .metod {
     background-color: var(--lilas-bg);
     display: flex;
@@ -161,6 +187,9 @@ html {
 
 /* Pilares */
 
+.pad{
+    padding-bottom: 10%;
+}
 .pilares {
     display: flex;
     justify-content: center;
@@ -184,7 +213,6 @@ html {
 }
 
 /* Card com fotos */
-
 .pilares-card {
     border: 0.1rem solid var(--roxo); 
     margin: 1rem; 
@@ -195,7 +223,7 @@ html {
     border-radius: 3rem; 
     padding: 2rem;
     width: 50%;
-    max-width: 40rem; 
+    max-width: 90rem; 
     height: 80vh;
 }
 
@@ -219,8 +247,8 @@ html {
     border: transparent;
 }
 
-/* Área Texto */
 
+/* Área Texto */
 .area-text {
     background-color: var(--lilas-bg);
     border-radius: 2rem; /* Border-radius responsivo */
@@ -240,12 +268,12 @@ html {
     font-weight: 400;
     font-size: 2rem; /* Tamanho de fonte responsivo */
 }
-.area-text p{
-    font-size: 1.1rem;
+
+.area-text p {
+    font-size: 1.3rem; /* Tamanho de fonte responsivo */
 }
 
 /* Quem Somos */
-
 .quem-somos {
     background-color: var(--roxo);
 }
@@ -267,7 +295,6 @@ html {
 }
 
 /* O que Fazemos */
-
 .oque-fazemos {
     display: flex;
     justify-content: center;
@@ -296,7 +323,6 @@ html {
 }
 
 /* Final */
-
 .final {
     background-image: url(/Landpage/components/img/bg2.png);
     width: 100%;
@@ -326,7 +352,6 @@ html {
 }
 
 /* Footer */
-
 footer {
     background-color: #251937;
     display: flex;
@@ -336,16 +361,71 @@ footer {
     font-size: 1.2rem; /* Tamanho de fonte responsivo */
     height: 10vh;
 }
-.desc-mobi{
+
+.desc-mobi {
     display: none;
 }
 
 
+
 @media (max-width:850px){
+
+/* Navbar mobile */
+.navbar{
+    display: none;
+}
+.burguermenu{
+
+    width: 100%;
+    box-shadow: 0.1rem 0.1rem 2rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 7vh;
+   
+}
+
+
+.burguer{
+
+    width: 16%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    cursor: pointer; 
+}
+.barra{
+
+    background-color: var(--roxo);
+    width: 100%;
+    height: 100%;
+    margin: 0.2rem;
+    margin-right: 1rem;
+}
+.link-mobi li{
+    display: none;
+}
+.link-mobi ul{
+    list-style: none;
+}
+.link-mobi a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+/**---------------------------------------------------**/
+
 
     .topo-desc h2 {
         font-size: 3rem; 
-       
     }
 
     .metod h2 {
@@ -358,21 +438,23 @@ footer {
     .area-text h2{
         font-size: 2rem;
         border-radius: 10px;
-       
     }
+    
     .area-text p{
         display: none;
     }
+    
     .area-text{
         height: 40px;
         border-radius: 1rem;
         width: 90%;
+        font-size: 1rem;
     }
-
+   
     .pilares-card{
         height: 36vh;
     }
-
+    
     .pilares img{
         height: 50%;
         width: 90;
@@ -400,9 +482,319 @@ footer {
     }
 }
 
-@media(min-width:1000px){
-    .area-text p{
-        font-size: 1.4rem;
-    }
-    
-}
+            /* Tela fullscreem */
+ @media (min-width: 1900px) {
+
+             /* Estilos para o cabeçalho (topo-desc) */
+             .topo-desc h2 {
+                font-size: 9rem; /* Ajustado o tamanho da fonte */
+                margin-bottom: 0; /* Removido o margin-bottom */
+            }
+        
+            .topo-desc p {
+                color: #fff;
+                padding: 2rem;
+                text-align: center;
+                font-size: 3rem; /* Ajustado o tamanho da fonte */
+            }
+        
+            .btn, .btn-2 {
+                zoom: 1; /* Ajustado zoom para aumentar os botões */
+            }
+            
+                /* Estilos para a área Método (metod e metod-title) */
+                .metod-title {
+                    height: 10rem; /* Ajustado altura para 10rem */
+                    justify-content: flex-end;
+                    align-items: center;
+                    display: flex;
+                }
+            
+                .metod h2 {
+                    font-size: 4rem; /* Ajustado tamanho da fonte */
+                }
+            
+                .metod-desc p {
+                    font-size: 4rem; /* Ajustado tamanho da fonte */
+                }
+            
+            
+                /* Estilos para os Pilares (pilares e pilares-area) */
+                .pilares h2 {
+                    font-size: 5rem; /* Tamanho de fonte responsivo */
+                }
+            
+                .pilares-area { 
+                    width: 90%;
+                }
+            
+                /* Estilos para a seção Quem Somos (area-quem-somos) */
+                .area-quem-somos {
+                    width: 50%;
+                    padding: 5%;
+                }
+            
+                .area-quem-somos h2 {
+                    color: #fff;
+                    font-size: 3rem; /* Tamanho de fonte responsivo */
+                }
+            
+                .area-quem-somos p {
+                    color: #fff;
+                    font-weight: 200;
+                    padding-bottom: 2%;
+                    font-size: 3.1rem;
+                }
+            
+                /* Estilos para a seção O que Fazemos (area-oque-fazemos) */
+                .area-oque-fazemos h2 {
+                    font-size: 5rem; /* Ajustado tamanho da fonte */
+                }
+            
+                .area-oque-fazemos p {
+                    font-size: 3.1rem; /* Ajustado tamanho da fonte */
+                }
+            
+                .final h2 {
+                    font-size: 5rem; /* Ajustado tamanho da fonte */
+                    padding-top: 6%; /* Ajustado padding-top */
+                }
+            
+                /* Estilos para a seção Final (final) */
+                .final {
+                    background-image: url(/Landpage/components/img/bg2.png);
+                    width: 100%;
+                    padding-bottom: 2%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            
+                .final h2 {
+                    padding-top: 6%;
+                    font-size: 5rem; /* Tamanho de fonte responsivo */  
+                    color: #fff;
+                    width: 80%;
+                    text-align: center;
+                }
+                
+                .final p {
+                    color: #fff;
+                    font-size: 3rem; /* Tamanho de fonte responsivo */
+                    border-bottom: 0.1rem solid #fff; /* Bordas responsivas */
+                    padding-bottom: 2%;
+                }
+            
+                /* Estilos para o footer */
+                footer {
+                    background-color: #251937;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 2rem; /* Tamanho de fonte responsivo */
+                    height: 10vh;
+                }
+            
+                /* Estilos para os Cards (pilares-card) */
+                .pilares-card {
+                    border: 0.1rem solid var(--roxo); 
+                    margin: 1rem; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border-radius: 3rem; 
+                    padding: 2rem;
+                    width: 50%;
+                    max-width: 80rem; 
+                    height: 80vh;
+                }
+            
+                .pilares-card img {
+                    padding: 0.5rem; /* Preenchimento responsivo */
+                    width: 90%;
+                    height: 30vh;
+                    object-fit: cover;
+                    border-radius: 2rem; /* Border-radius responsivo */
+                    transition: all 0.5s ease;
+                    border: transparent;
+                }
+            
+                .pilares-card img:hover {
+                    padding: 0.5rem;
+                    width: 90%;
+                    height: 30vh;
+                    object-fit: cover;
+                    border-radius: 2rem;
+                    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.7);
+                    border: transparent;
+                }
+            
+                /* Estilos para a área de Texto (area-text) */
+                .area-text {
+                    background-color: var(--lilas-bg);
+                    border-radius: 2rem; /* Border-radius responsivo */
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    font-size: 1.6rem; /* Tamanho de fonte responsivo */
+                    color: var(--roxo);
+                    margin-top: 4%;
+                    padding: 2rem;
+                    font-weight: 200;
+                    padding-bottom: 5%;
+                }
+            
+                .area-text h2 {
+                    font-weight: 400;
+                    font-size: 2rem; /* Tamanho de fonte responsivo */
+                }
+            
+                .area-text p {
+                    font-size: 2.1rem;
+                }
+            }
+            
+@media only screen and (max-width: 768px) {
+
+                /* Estilos para o topo (topo e topo-desc) */
+                .topo {
+                    height: 60vh;
+                }
+            
+                .topo-desc {
+                    width: 90%;
+                }
+            
+                .topo-desc h2 {
+                    font-size: 3rem; /* Tamanho de fonte responsivo */
+                    padding: 0 2rem; /* Preenchimento responsivo */
+                }
+                
+                .topo-desc p {
+                    color: #fff;
+                    padding: 0 2rem; /* Preenchimento responsivo */
+                    text-align: center;
+                    font-size: 0.8em;
+                    font-weight: 200;
+                }
+            
+                /* Estilos para os botões (btn e btn-2) */
+                
+                .btn {
+                    width: 86% ;
+                    font-size: small;
+                    margin-top: 5%;
+                    border: 1px solid red;
+                    padding: auto;
+               
+                }
+            
+                .btn-2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100% ;
+                    font-size: small;
+                }
+
+                .btn:hover{
+                    width: 90% ;
+                    font-size: small;
+                   
+                }
+                .btn-2:hover{
+                    
+                    width: 100% ;
+                    font-size: small;
+                }
+            
+                /* Estilos para a área Método (metod) */
+                .metod {
+                    height: 40vh;
+                }
+            
+                .metod h2 {
+                    color: var(--roxo);
+                    width: 40vw; /* Largura responsiva */
+                    font-weight: 300;
+                    font-size: 1.8rem; /* Tamanho de fonte responsivo */
+                }
+            
+                /* Estilos para os Pilares (pilares e pilares-area) */
+                .pilares-area {
+                    display: flex;
+                    width: 70%;
+                    padding-bottom: 5%;
+                }
+            
+                .pilares-area p {
+                    text-align: center;
+                }
+            
+                .pilares h2 {
+                    text-align: center;
+                    padding: 0 2%;
+                    font-size: 2rem;
+                }
+            
+                /* Estilos para os Cards (pilares-card) */
+                .pilares-card {
+                    width: 50%;
+                    min-width: 14rem; 
+                    height: 20vh;
+                }
+            
+                .pilares-card img {
+                    width: 90%;
+                    height: 8rem;
+                    object-fit: cover;
+                    transition: all 0.5s ease;
+                    border: transparent;
+                }
+            
+                .pilares-card img:hover {
+                    padding: 0.5rem;
+                    width: 90%;
+                    height: 10rem;
+                    object-fit: cover;
+                    border-radius: 2rem;
+                    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.7);
+                    border: transparent;
+                }
+            
+                /* Estilos para a seção Quem Somos (area-quem-somos) */
+                .area-quem-somos {
+                    width: 80%;
+                    padding: 5%;
+                }
+            
+                /* Estilos para a seção Final (final) */
+                .final h2 {
+                    font-size: 3rem;
+                    width: 95%;
+                }
+            
+                .final p {
+                    font-size: 1.8rem;
+                    text-align: center;
+                    width: 80%;
+                    padding-bottom: 2%;
+                }
+                
+                /* Estilos adicionais para a seção de descrição em dispositivos móveis (bg-desc-mobi) */
+                .bg-desc-mobi h2 {
+                    text-align: left;
+                }
+            
+                .bg-desc-mobi p {
+                    color: var(--roxo);
+                    font-size: 1.8rem;
+                    padding-bottom: 6%;
+                }
+            }
+            

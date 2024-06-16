@@ -16,20 +16,57 @@
 
 </head>
 <body>
-    <head>
+    <header>
+
+        <!-- navbar normal -->
         <nav class="navbar">
             <ul>
                 <li>
                     GrupoPotencia
                 </li>
                 <li>
-                    <a href="">Nossos Métodos</a>
-                    <a href="">Quem Somos</a>
-                    <a href="">Oque fazemos</a>
+                    <a href="#nossos-metodos">Nossos Métodos</a>
+                    <a href="#quem-somos">Quem Somos</a>
+                    <a href="#oque-fazemos">Oque fazemos</a>
                 </li>
             </ul>
         </nav>
-    </head>
+        <!--display burguer-->
+        
+        <div class="burguermenu">
+           <div onclick="clickMenu()"class="burguer">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+           </div>
+        </div>
+        <div class="link-mobi" style="display:block;">
+           <ul >
+            <li id="itens" >
+                <a href="#nossos-metodos"> Nossos Métodos</a>
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#oque-fazemos">Oque fazemos</a>
+            </li>
+           </ul>
+        </div>
+    </header>
+
+    <!-- script -->
+
+    <script>
+        function clickMenu(){
+            
+            var itens = document.getElementById('itens'); 
+        
+            if(itens.style.display === 'block'){
+                itens.style.display = 'none'; 
+            } else {
+                itens.style.display = 'block'; 
+            }
+        }
+
+    </script>
+    
     <main>
         <section class="topo">
             <article class="topo-desc">
@@ -37,7 +74,10 @@
                      Estratégias de Sucesso</h2>
                 <p>Mais do que uma Agência de Marketing Digital, Somos seus 
                 Parceiros Comprometidos  com o Crescimento do Seu Negócio</p>
-                <button class="btn">RESERVAR SESSÃO ESTRATÉGICA</button>
+                <a href="https://wa.me/13996181932">
+                    <button class="btn">RESERVAR SESSÃO ESTRATÉGICA</button>
+                </a>
+                
             </article>
         </section>
         <section class="metod">
@@ -53,7 +93,7 @@
             </p>
            </article>
         </section>
-        <section class="pilares">
+        <section id="nossos-metodos" class="pilares">
             <h2>OS PILARES DO NOSSO MÉTODO</h2>
             <article class="pilares-area">
                     <!-- card1 -->
@@ -161,7 +201,7 @@
                 </div>
             </article>
         </section>
-        <section class="quem-somos">
+        <section id="quem-somos" class="quem-somos">
           <article class="area-quem-somos">
             <h2>QUEM SOMOS</h2>
             <p>
@@ -182,11 +222,13 @@
             para aumentar suas vendas e, consequentemente, seu poder de investimento em 
             inovação. Com mais recursos, você poderá implementar novas 
             estratégias e continuar crescendo</p>
-            <button class="btn-2">RESERVAR SESSÃO ESTRATÉGICA</button>
+            <a href="https://wa.me/13996181932">
+                <button class="btn-2">RESERVAR SESSÃO ESTRATÉGICA</button>
+            </a>
           </article>
         </section>
-        <section class="oque-fazemos">
-            <article class="area-oque-fazemos">
+        <section id="oque-fazemos" class="oque-fazemos">
+            <article  class="area-oque-fazemos">
                 <h2>O QUE FAZEMOS</h2>
                 <p>
                     Nas agências digitais, a preocupação é sempre preencher checklists 
@@ -217,7 +259,9 @@
                 <p>
                     Projeção das suas vendas  Equipe com foco em resultados
                 </p>
-                <button style="margin-top: 3%; padding: 1% 5%;" class="btn">RESERVAR SESSÃO ESTRATÉGICA</button>
+                <a href="https://wa.me/13996181932"></a>
+                <button class="btn">RESERVAR SESSÃO ESTRATÉGICA</button>
+                </a>
             </div>
         </section>
     </main>
