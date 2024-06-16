@@ -54,7 +54,7 @@ list-style: none;
     align-items: center;
     list-style: none;
     width: 90%;
-    
+  
 }
 
 .navbar li {
@@ -73,6 +73,8 @@ list-style: none;
     font-weight: 600;
     font-size: 1.4rem; /* Tamanho de fonte responsivo */
     transition: .5s all ease;
+    
+    width: 10vw;
 }
 
 .navbar a:hover {
@@ -357,13 +359,35 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     color: #fff;
     font-size: 1.2rem; /* Tamanho de fonte responsivo */
-    height: 10vh;
+    
 }
 footer a{
     text-decoration: none;
     color: #fff;
+}
+.contatos{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+.direito{
+    
+    width: 70%;
+    text-align: end;
+
+}
+
+.direito h2{
+
+    font-size: x-large;
+}
+
+.direito     p{
+    font-size: medium;
 }
 
 .desc-mobi {
@@ -599,6 +623,8 @@ footer a{
                     color: #fff;
                     font-size: 2rem; /* Tamanho de fonte responsivo */
                     height: 10vh;
+                    flex-direction: column;
+                    border: 1px solid red;
                 }
             
                 /* Estilos para os Cards (pilares-card) */
