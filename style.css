@@ -361,6 +361,10 @@ footer {
     font-size: 1.2rem; /* Tamanho de fonte responsivo */
     height: 10vh;
 }
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
 
 .desc-mobi {
     display: none;
@@ -689,7 +693,6 @@ footer {
                     width: 86% ;
                     font-size: small;
                     margin-top: 5%;
-                    border: 1px solid red;
                     padding: auto;
                
                 }
