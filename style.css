@@ -362,6 +362,7 @@ footer {
     flex-direction: column;
     color: #fff;
     font-size: 1.2rem; /* Tamanho de fonte responsivo */
+    text-align: center;
     
 }
 footer a{
@@ -448,6 +449,9 @@ footer a{
     font-size: 1.7rem;
     font-weight: 400;
     text-decoration: none;
+}
+.btn{
+margin-bottom: 2.5rem;
 }
 /**---------------------------------------------------**/
 
