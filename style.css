@@ -437,9 +437,20 @@ footer a{
 }
 .link-mobi li{
     display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin-left: 0;
+ 
 }
 .link-mobi ul{
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+    width: 100%;
+    
 }
 .link-mobi a{
     display: flex;
@@ -450,6 +461,10 @@ footer a{
     font-size: 1.7rem;
     font-weight: 400;
     text-decoration: none;
+    width: 100%;
+    color: var(--roxo)
+    
+    
 }
 .btn{
 margin-bottom: 2.5rem;
