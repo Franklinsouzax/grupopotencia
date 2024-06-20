@@ -417,14 +417,15 @@ footer a{
 
 .burguer{
 
-    width: 16%;
+    width: 12%;
     height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.4rem;
     cursor: pointer; 
+    
 }
 .barra{
 
