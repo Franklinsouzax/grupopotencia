@@ -448,10 +448,9 @@ footer a{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2% 0;
     width: 100%;
-    
 }
+
 .link-mobi a{
     display: flex;
     justify-content: center;
