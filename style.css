@@ -368,6 +368,12 @@ footer {
 footer a{
     text-decoration: none;
     color: #fff;
+    transition: all .5s ease;
+}
+footer a:hover{
+
+    color: #af98d1;
+
 }
 .contatos{
     display: flex;
@@ -450,7 +456,7 @@ footer a{
     align-items: center;
     width: 100%;
 }
-
+    
 .link-mobi a{
     display: flex;
     justify-content: center;
@@ -654,6 +660,7 @@ margin-bottom: 2.5rem;
                     font-size: 2rem; /* Tamanho de fonte responsivo */
                     height: 10vh;
                     flex-direction: column;
+                    width: 90%;
                     
                 }
             
