@@ -1,3 +1,17 @@
+/*
+Theme Name:     Meu Tema Pai
+Theme URI:      https://potenciaassessoria.com/
+Description:    Landpage Grupo Potencia
+Version:        1.0
+Author:         Franklin Souza
+Author URI:     https://potenciaassessoria.com/
+License:        GNU General Public License v2 or later
+License URI:    https://www.gnu.org/licenses/gpl-2.0.html
+Tags:           responsive-layout, custom-header, translation-ready
+*/
+
+/* Restante do CSS do tema filho abaixo */
+
 /* Definições gerais */
 body {
     margin: 0;
@@ -723,6 +737,11 @@ margin-bottom: 2.5rem;
             
                 .area-text p {
                     font-size: 2.1rem;
+                }
+                footer{
+                    height: 100%;
+                    padding-bottom: 1%;
+                    width: 100%;
                 }
             }
             
