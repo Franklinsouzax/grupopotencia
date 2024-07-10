@@ -1,0 +1,44 @@
+
+.topicos-pilares h2,
+.topicos-pilares p,
+.quem-somos h2,
+.quem-somos p {
+    opacity: 0; /* Inicia invisível */
+    transform: translateX(-50px); /* Inicia ligeiramente à esquerda */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.topicos-pilares .mostrar {
+    opacity: 1; /* Mostra quando a classe 'mostrar' é adicionada */
+    transform: translateX(0); /* Desliza para o centro */
+    transition-delay: 0.2s; /* Atraso na transição */
+}
+.quem-somos .mostrar{
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+/* DESKTOP */
+
+.pilares-desktop {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.pilares-desktop h2 {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pilares-desktop p {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pilares-desktop .mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
